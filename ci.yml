@@ -1,0 +1,8 @@
+---
+- name: building ci
+  hosts: localhosts
+  become: true
+  taska:
+    - name: Running mvn clean to create .war file
+      shell: "mvn package"
+      chdir: "/var/lib/jenkins/workspace/jenkins_ci/project/CI-usingAnsible"
