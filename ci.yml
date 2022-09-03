@@ -5,6 +5,6 @@
   become_user: root
   tasks:
     - name: Running mvn clean to create .war file
-      shell: "mvn package"
+      command: "mvn package"
       args:
         chdir: "/var/lib/jenkins/workspace/jenkins_ci/project/CI-usingAnsible"
