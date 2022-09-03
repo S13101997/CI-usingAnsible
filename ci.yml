@@ -7,4 +7,4 @@
     - name: Running mvn clean to create .war file
       command: "mvn package"
       args:
-        chdir: "/var/lib/jenkins/workspace/jenkins_ci/project/CI-usingAnsible"
+        chdir: "/var/lib/jenkins/workspace/jenkins_ci/project"
