@@ -1,7 +1,7 @@
 ---
 - name: building ci
   hosts: localhost
-  become: true
+  #become: true
   #become_user: root
   tasks:
     - name: Running mvn clean to create .war file
