@@ -108,13 +108,13 @@
     
 - name: Pull httpd docker image
   docker_image:
-    name: tomcat
+    name: httpd
     tag: latest
     source: pull
 
 - name: Copy website to the host
   copy:
-    src: /var/lib/jenkins/workspace/jenkins_ci/project/target/LoginWebApp-1.war
+    src: /var/lib/jenkins/workspace/jenkins_ci/project/target/LoginWebApp-1
     dest: /root/webpage
     
 #- name: copy war file
@@ -123,14 +123,14 @@
 - name: Run docker container
   docker_container:
       name: WebServer
-      image: tomcat:latest
+      image: httpd:latest
       state: started
       exposed_ports:
       - "80"
       ports:
-      - "8080:80"
+      - "80:80"
       volumes:
-      - /root/webpage/:/usr/local/tomcat/webapps
+      - /root/webpage/:/usr/local/apache2/htdocs/
       
       
 #  notify: restart tomcat
