@@ -123,7 +123,7 @@
 - name: Run docker container
   docker_container:
       name: WebServer
-      image: httpd:latest
+      image: tomcat:latest
       state: started
       exposed_ports:
       - "80"
