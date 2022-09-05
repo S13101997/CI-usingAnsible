@@ -130,7 +130,7 @@
       ports:
       - "80:80"
       volumes:
-      - /root/webpage/:/usr/local/apache2/htdocs/
+      - /root/webpage/:/usr/local/tomcat/webapps
       
       
 #  notify: restart tomcat
