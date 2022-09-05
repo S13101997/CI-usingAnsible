@@ -1,5 +1,6 @@
 [all]
-54.227.27.230
+#54.227.27.230
+localhost
 
 [all:vars]
 ansible_user=root
