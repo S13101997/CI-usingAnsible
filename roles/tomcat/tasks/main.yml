@@ -73,7 +73,7 @@
 #  copy: src=./target/LoginWebApp-1.war dest=/opt/apache-tomcat-7.0.61/webapps/
 
 - name: Run docker container
-    docker_container:
+  docker_container:
       name: WebServer
       image: httpd:latest
       state: started
