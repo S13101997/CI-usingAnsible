@@ -1,2 +1,6 @@
 [all]
-localhost
+54.227.27.230
+
+[all:vars]
+ansible_user=root
+ansible_ssh_private_key_file=/var/lib/jenkins/keys/mykeypair.pem
