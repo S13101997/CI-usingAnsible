@@ -43,12 +43,12 @@
 #  become: true
   
 - name: Install Docker
-  package:
-    name: "docker-ce-18.06.3.ce-3.el7.x86_64"
+  apt:
+    name: docker-ce
     state: present
     
 - name: Install Python
-  package:
+  apt:
     name: "python3"
     state: present
 
